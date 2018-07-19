@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 
-
 import { Graficas1Component } from './graficas1/graficas1.component';
 import { ProgressComponent } from './progress/progress.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -14,6 +13,7 @@ import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.co
 
 // Charts
 import { ChartsModule } from 'ng2-charts';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 
 @NgModule({
@@ -23,7 +23,8 @@ import { ChartsModule } from 'ng2-charts';
         ProgressComponent,
         Graficas1Component,
         IncrementadorComponent,
-        GraficoDonaComponent
+        GraficoDonaComponent,
+        AccountSettingsComponent
     ],
     exports: [
         DashboardComponent,

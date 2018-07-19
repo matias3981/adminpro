@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+// Servicios
+import { ServiceModule } from './services/service.module';
+
 // Rutas
 import { APP_ROUTING } from './app.routes';
 
@@ -20,7 +23,8 @@ import { RegisterComponent } from './login/register.component';
   imports: [
     BrowserModule,
     APP_ROUTING,
-    PagesModule
+    PagesModule,
+    ServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]
