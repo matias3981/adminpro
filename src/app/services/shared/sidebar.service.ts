@@ -20,6 +20,10 @@ export class SidebarService {
       {
         item: 'Graficas',
         url: '/graficas1'
+      },
+      {
+        item: 'Rxjs',
+        url: '/rxjs'
       }
     ]}
   ];
