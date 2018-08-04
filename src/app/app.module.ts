@@ -12,6 +12,7 @@ import { PagesModule } from './pages/pages.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
+import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
 
 
 @NgModule({
@@ -24,6 +25,8 @@ import { RegisterComponent } from './login/register.component';
     BrowserModule,
     APP_ROUTING,
     PagesModule,
+    FormsModule,
+    ReactiveFormsModule,
     ServiceModule
   ],
   providers: [],
