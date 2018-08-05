@@ -1,0 +1,63 @@
+<div class="row">
+
+  <div class="col-lg-7">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Perfil de {{ usuario.nombre}}</h4>
+
+        <form ngNativeValidate #userForm="ngForm" (ngSubmit)="actualizarUsuario(userForm.value)" class="form p-t-20">
+          <div class="form-group">
+            <label for="exampleInputuname">Nombre</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="ti-user"></i>
+              </div>
+              <input [ngModel]="usuario.nombre" name="nombre" required type="text" class="form-control" id="exampleInputuname" placeholder="Username">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Dirección de Correo</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="ti-email"></i>
+              </div>
+              <input [ngModel]="usuario.email" [disabled]="usuario.google" name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">
+            Guardar
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-5">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Actualizar Foto de Perfil</h4>
+        <form class="form p-t-20">
+          <div class="form-group" align="center">
+            <img *ngIf="!imagenTemp" [src]="usuario.img | imagen" class="w150">
+            <img *ngIf="imagenTemp" [src]="imagenTemp" class="w150">
+
+            <br>
+            <br>
+
+            <input (change)="subirImagen($event.target.files[0])" type="file"class="form-control">
+            <br>
+            <br>
+            <button (click)="cambiarImagen()" [disabled]="!imagenASubir" type="submit" class="btn btn-success waves-effect waves-light m-r-10">
+              Actualizar
+            </button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
