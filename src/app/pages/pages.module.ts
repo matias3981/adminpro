@@ -21,6 +21,8 @@ import { ChartsModule } from 'ng2-charts';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { PerfilComponent } from './perfil/perfil.component';
         AccountSettingsComponent,
         RxjsComponent,
         PerfilComponent,
+        UsuariosComponent,
+        ModalUploadComponent,
     ],
     exports: [
         DashboardComponent,
